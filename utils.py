@@ -5,12 +5,11 @@ import numpy as np
 
 pp = pprint.PrettyPrinter()
 
-def get_meshgrid(X, Y, R, n_x=1000):
-    x_ubd, x_lbd = X + R, X - R
-    y_ubd, y_lbd = Y + R, Y - R
-    
-    step_x = (x_ubd - x_lbd) / n_x
-    n_y = int(np.ceil((y_ubd - y_lbd) / step_x))
+def get_meshgrid(X, Y, R, n_x=1000, n_y=1000):
+    Rx = R
+    Ry = (n_y / n_x) * Rx
+    x_ubd, x_lbd = X + Rx, X - Rx
+    y_ubd, y_lbd = Y + Ry, Y - Ry
     
     x_rng = np.linspace(x_lbd, x_ubd, n_x, dtype=np.float64)
     y_rng = np.linspace(y_lbd, y_ubd, n_y, dtype=np.float64)
