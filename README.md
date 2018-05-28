@@ -27,3 +27,5 @@ Based on the [Mandelbrot set tutorial](https://www.tensorflow.org/tutorials/mand
 
 `python3 main.py --X=-1.25066 --Y=0.02012 --R=1.7E-4`
 ![](https://github.com/KellerJordan/Mandelbrot-Tensorflow/blob/master/samples/mandelbrot_-1.250660-0.020120-0.000170.png)
+
+You can find more interesting places to zoom at [http://www.cuug.ab.ca/dewara/mandelbrot/images.html](http://www.cuug.ab.ca/dewara/mandelbrot/images.html). Unfortunately, zoom is limited past `R=10E-10` due to 128-bit floating point error. Note that for higher zoom, you may need to increase the `num_iters`.
